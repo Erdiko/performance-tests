@@ -1,0 +1,6 @@
+{
+    "name": "performance-tests",
+    "require-dev": {
+        "phpbench/phpbench": "^1.0@dev"
+    }
+}
