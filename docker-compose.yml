@@ -1,0 +1,22 @@
+version: '2.1'
+
+services:
+  data:
+    image: busybox
+    volumes:
+      - ./benchmarks:/benchmarks
+
+  webserver:
+    extends:
+      file: ./docker/nginx/docker-compose.yml
+      service: webserver
+    container_name: erdiko_performance_web
+    volumes_from: [data]
+    ports:
+      - "8088:80"
+
+  php:
+    container_name: erdiko_performance_php
+    env_file: ./docker/environment.env
+    image: erdiko/php-fpm:latest
+    volumes_from: [data]

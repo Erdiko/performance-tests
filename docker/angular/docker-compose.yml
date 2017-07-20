@@ -1,0 +1,12 @@
+version: '2.1'
+
+services:
+  node:
+    env_file: environment.env
+    image: erdiko/angular:latest
+    volumes:
+      - ../../:/var/www/code
+    entrypoint:
+      - tail
+      - -f
+      - /dev/null
