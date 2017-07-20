@@ -32,8 +32,19 @@ And also will add new bin for PhpBench
 $ phpbench --help
 ```
 
+#### Running benchmark
 
-#### Run Benchmark
+```
+$ cd /benchmarks/jsonYml/scripts
+$ sh run-bench.sh
+```
+
+#### Benchmark parameters
+
+```
+$ sh run-bench.sh -i 5000 -r 1000
+```
+
 These are the main parameters to run the benchmark:
 
  - Iterations: Iterations represent the number of times we will perform the benchmark (including all the revolutions). Contrary to revolutions, a time reading will be taken for each iteration.
@@ -47,8 +58,3 @@ Revolution Reference: [PhpBench Revolution Reference](http://phpbench.readthedoc
 Default Values:
  - Iterations: 1000
  - Revolutions 10
-
-```
-$ cd /benchmarks/jsonYml/scripts
-$ sh run-bench.sh
-```
