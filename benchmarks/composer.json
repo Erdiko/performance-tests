@@ -1,6 +1,7 @@
 {
     "name": "performance-tests",
     "require-dev": {
-        "phpbench/phpbench": "^1.0@dev"
+        "phpbench/phpbench": "^1.0@dev",
+        "fzaninotto/faker": "^1.6"
     }
 }
